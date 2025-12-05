@@ -73,7 +73,7 @@
     "markdownlint-cli2": "^0.19.1",
     "prettier": "^3.7.4",
     "ts-jest": "^29.4.0",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2",
     "zod": "^4.1.13"
