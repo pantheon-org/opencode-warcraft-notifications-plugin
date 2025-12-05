@@ -52,7 +52,7 @@ jobs:
           echo "✅ Documentation transformed from ./docs/ to ./pages/src/content/docs/"
 
       - name: Build and upload with Astro action
-        uses: withastro/action@v3
+        uses: withastro/action@v5
         with:
           path: ./pages
           package-manager: bun@latest
