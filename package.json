@@ -1,0 +1,70 @@
+{
+  "name": "@pantheon-org/opencode-warcraft-notifications-plugin",
+  "version": "0.1.0",
+  "description": "warcraft notifications plugins for opencode",
+  "keywords": [
+    "opencode",
+    "plugin",
+    "typescript"
+  ],
+  "homepage": "https://github.com/pantheon-org/opencode-warcraft-notifications-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/pantheon-org/opencode-warcraft-notifications-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pantheon-org/opencode-warcraft-notifications-plugin.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test src",
+    "test:coverage": "bun test --coverage src/",
+    "test:watch": "bun test --watch src/",
+    "test:verbose": "bun test src/ --reporter tap",
+    "type-check": "bun tsc --noEmit --project tsconfig.test.json",
+    "lint": "eslint src/",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,cjs,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,cjs,css}\"",
+    "clean": "rm -rf dist/ .bun-cache/ coverage/",
+    "build": "bun tsc",
+    "dev": "bun tsc --watch",
+    "verify:package": "npm pack --dry-run",
+    "prepublishOnly": "bun run build && bun test && bun run verify:package"
+  },
+  "dependencies": {
+    "zod": "^4.1.8"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.0.119",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "bun-types": "^1.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsdoc": "^39.0.0",
+    "eslint-plugin-prefer-arrow": "^1.2.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-sonarjs": "^0.16.0",
+    "eslint-plugin-tsdoc": "^0.4.0",
+    "markdownlint-cli2": "^0.19.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "bun": ">=1.0.0"
+  }
+}
